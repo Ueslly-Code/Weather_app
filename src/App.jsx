@@ -147,7 +147,7 @@ function App() {
   return (
     <div className="app-container">
       <div className="header">
-        <h1>Anime Weather <span className="accent">ダッシュボード</span></h1>
+        <h1>Weather Dash<span className="accent">board</span></h1>
         <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
       </div>
       
@@ -171,7 +171,8 @@ function App() {
           <ForecastList forecast={forecast} />
         </div>
       )}
-      
+      <br />
+      <hr />
       <footer>
         <p>Created with ❤️ | Data from OpenWeatherMap</p>
       </footer>
