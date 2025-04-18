@@ -1,0 +1,52 @@
+/* src/components/ThemeToggle.css */
+.theme-toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-track {
+    width: 60px;
+    height: 30px;
+    background-color: var(--bg-secondary);
+    border-radius: 30px;
+    border: 2px solid var(--border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .toggle-thumb {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px var(--accent);
+  }
+  
+  .toggle-thumb.light {
+    left: 4px;
+  }
+  
+  .toggle-thumb.dark {
+    left: 32px;
+  }
+  
+  .toggle-icon {
+    font-size: 14px;
+    z-index: 1;
+  }
+  
+  .toggle-icon.moon {
+    margin-right: auto;
+  }
+  
+  .toggle-icon.sun {
+    margin-left: auto;
+  }

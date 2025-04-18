@@ -1,0 +1,116 @@
+/* src/components/WeatherCard.css */
+.weather-card {
+    background-color: var(--bg-secondary);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px var(--shadow);
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid var(--border);
+  }
+  
+  .weather-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, var(--accent), var(--accent-light));
+  }
+  
+  .weather-card::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%);
+    opacity: 0.2;
+    z-index: 0;
+  }
+  
+  .city-info {
+    margin-bottom: 1.5rem;
+  }
+  
+  .city-info h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px var(--shadow);
+  }
+  
+  .date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+  
+  .weather-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .temperature {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px var(--shadow);
+  }
+  
+  .feels-like {
+    color: var(--text-secondary);
+  }
+  
+  .weather-icon-container {
+    text-align: center;
+  }
+  
+  .weather-description {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 0.5rem;
+  }
+  
+  .weather-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  
+  .detail {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .detail-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .detail-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .weather-main {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .weather-details {
+      grid-template-columns: 1fr;
+    }
+  }
